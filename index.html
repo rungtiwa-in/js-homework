@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>LAB BOOTSTRAP</title>
+    <title>To Do List</title>
 
     <style>
         .bd-placeholder-img {
@@ -30,6 +30,10 @@
 
         .list-group-item.done {
             text-decoration: line-through;
+        }
+
+        .list-group-item span{
+            cursor: pointer;
         }
     </style>
     <!-- <link href="css/home.css" rel="stylesheet"> -->
@@ -62,14 +66,17 @@
     </nav>
 
     <div class="container">
-        <h1 class="display-3" style="margin-top: 6rem;">To Do List</h1>
         <div class="row justify-content-md-center">
+            <div class="col col-lg-8">
+                <h1 class="display-3" style="margin-top: 6rem;">To Do List</h1>
+            </div>
             <div class="col col-lg-8 mt-5">
                 <div class="input-group mb-3">
                     <input type="text" id="message" class="form-control" placeholder="Title" aria-label="Title"
                         aria-describedby="btn-add">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="btn-add" onclick="addToDo()">Add</button>
+                        <button class="btn btn-outline-secondary" type="button" id="btn-add"
+                            onclick="addToDo()">Add</button>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,14 @@
 let todolist = [
     {
-        message: "Cras justo odio 1",
+        message: "To Do 1",
         isDone: true
     },
     {
-        message: "Cras justo odio 2",
+        message: "To Do 2",
         isDone: false
     },
     {
-        message: "Cras justo odio 3",
+        message: "To Do 3",
         isDone: false
     },
 ]
@@ -18,7 +18,7 @@ function setToDoList() {
     let html = ''
     for (let i = 0;i<todolist.length;i++){
         let liClass = todolist[i].isDone ? ' done':''
-        html += `<li class="list-group-item${liClass}"><span onclick="doneToDo(${i})">${todolist[i].message}</span> <button type="button" class="btn btn-danger" onclick="deleteToDo(${i})">Delete</button></li>`
+        html += `<li class="list-group-item${liClass}"><span onclick="doneToDo(${i})">${todolist[i].message}</span> <button type="button" class="btn btn-danger float-right btn-sm" onclick="deleteToDo(${i})">X</button></li>`
     }
     htmlList.innerHTML = html
 }
