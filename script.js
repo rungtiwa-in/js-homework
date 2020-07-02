@@ -16,9 +16,11 @@ let todolist = [
 function setToDoList() {
     let htmlList = document.getElementById('todo-list')
     let html = ''
-    for (let i = 0;i<todolist.length;i++){
-        let liClass = todolist[i].isDone ? ' done':''
-        html += `<li class="list-group-item${liClass}"><span onclick="doneToDo(${i})">${todolist[i].message}</span> <button type="button" class="btn btn-danger float-right btn-sm" onclick="deleteToDo(${i})">X</button></li>`
+    for (let i = 0; i < todolist.length; i++) {
+        let liClass = todolist[i].isDone ? ' done' : ''
+        html += `<li class="list-group-item${liClass}">
+        <span onclick="doneToDo(${i})">${todolist[i].message}</span> 
+        <button type="button" class="btn btn-danger float-right btn-sm" onclick="deleteToDo(${i})">X</button></li>`
     }
     htmlList.innerHTML = html
 }
@@ -37,7 +39,7 @@ function deleteToDo(index) {
     setToDoList()
 }
 
-function doneToDo(index){
+function doneToDo(index) {
     todolist[index].isDone = !todolist[index].isDone;
     setToDoList()
 }
